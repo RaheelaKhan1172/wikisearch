@@ -1,0 +1,26 @@
+
+body {
+  background: rgba(0,0,0,0) linear-gradient(90deg, #3b94bf 10%, #60c1f0 90%) repeat scroll 0 0;
+  display:flex;
+  justify-center:center;
+}
+.btn-default {
+  border:none;
+  background:none;
+}
+
+.span {
+  border-radius:50px;
+}
+.input-container {
+  margin-top:140px;
+  display:center;
+  position:center;
+  background: white;
+  width:50%;
+  height:180px;
+  border-radius:10px;
+}
+.form-control {
+  margin-top:70px;
+}

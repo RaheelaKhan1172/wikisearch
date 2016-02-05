@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+  </head> 
+  <body>
+    <div id="first" class="container active">
+      <div class="row">
+      <div class="input-container" id="defaultsearch">
+       <div class="input-group">
+        <i class="fa fa-wikipedia-w"></i>
+        <span class="input-group-btn">
+          <button class="btn btn-default" id="button" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></button></span>
+          <input type="text" class="form-control formInput" id="maindisplayform" onkeypress=" handle(event) " placeholder="Search for..">
+          <a href="https://en.wikipedia.org/wiki/Special:Random" id="random"><button id="random" class="btn" type="button"><i class="fa fa-random">Random</i></button></a>
+       </div> <!-- input -->
+      </div> <!-- col-lg-12 -->
+      </div> <!-- end first row -->
+    </div> <!-- end container ! -->
+    <div class="after" style="display:none;" id="after"> 
+    <div class="navbar navbar-trans navbar-default" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <div class="input-group">
+          <span class="input-group-btn">
+            <button class="btn btn-default" id="button1" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></button>
+          </span>
+          <input type="text" class="form-control formInput" id="secondform" onkeypress="handle(event)" placeholder="">
+          </div>
+        </li>
+      </ul> <!-- end ul --> 
+    </div> <!-- navbar for after search has been entered -->
+    <div id="second" class="container"> 
+      <div id="hm"><i class="fa "></i> </div>
+       
+    </div> <!-- container -->
+    </div> <!-- end after div -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script defer src="main.js"></script>
+  </body>
+</html>
