@@ -1,18 +1,24 @@
+
+/* Clicks */
 function buttonClick() {
   var inp = document.getElementById('maindisplayform').value;
   console.log(inp);
-  $("#first").removeClass('active');
-  $("#after").addClass('active');
-  $("#first").hide();
-  $(".after").show();
+  if (inp) {
+    $("#first").removeClass('active');
+    $("#after").addClass('active');
+    $("#first").hide();
+    $(".after").show();
+  }
+  var tar = document.getElementById("hm").children[0];
+    console.log(tar);
+    tar.className += "fa-spinner fa-spin";
+  getData(inp);
 };
  
 function handle(e) {
   if (e.keyCode === 13) {
-    console.log('cool I wokr');
    if ($("#first").hasClass("active")){
     var inp = document.getElementById('maindisplayform').value;
-    console.log(inp);
     $("#first").removeClass('active');
     $("#after").addClass('active');
     $("#first").hide();
@@ -27,6 +33,13 @@ function handle(e) {
    }   
   }
 }
+
+function secondClick() {
+  var inp = document.getElementById('secondform').value;
+  getData(inp);
+}
+
+/* API */
 
 function getData(inp) {
   if (inp[0].toUpperCase() !== inp[0]) {
@@ -46,7 +59,7 @@ function displayResults(data) {
    for(var j = 0; j < data[i+1].length ; j++) {
      html += "<div class='row'>";
      html += "<div class='col-lg-12'>";
-     html += "<a href='"+data[i+3][j]+"'>";
+     html += "<a class='afterlinks' href='"+data[i+3][j]+"'>";
      html += "<h1 class ='title'>"+data[i+1][j]+"</h1>";
      html += "<p class='description'>"+data[i+2][j]+"</p>";
      html += "</a>";
@@ -54,12 +67,16 @@ function displayResults(data) {
    }   
   }
   $(".fa").removeClass("fa-spinner fa-spin");
-  $("#second").append(html); 
-}  
+  $("#second").html(html); 
+}
+  
+ /** Document Ready **/
 
 $("document").ready(function() {
   document.getElementById("maindisplayform").value = "";
-  document.getElementById("maindisplayform").placeholder = "Search for...";
+  document.getElementById("maindisplayform").placeholder = "";
+  document.getElementById("secondform").value = "";
   $("#button").click(buttonClick);
+  $("#button1").click(secondClick);
   handle(e);
 });

@@ -12,29 +12,40 @@
   <body>
     <div id="first" class="container active">
       <div class="row">
-      <div class="input-container" id="defaultsearch">
+        <div class="col-lg-7 col-lg-offset-4">
+          <img class="img-responsive" alt="wikiearth" src="Wikipedia_logo_(svg).svg"></img>
+        </div>
+        <div id="wiki" class="col-lg-5 col-lg-offset-5">
+          <h1> Wikipedia Search </h1>
+        </div>
+       </div>
+      <div class="row">
+      <div class="col-lg-12 col-lg-offset-1">
+      <div class="input-container center-block" id="defaultsearch">
        <div class="input-group">
-        <i class="fa fa-wikipedia-w"></i>
         <span class="input-group-btn">
-          <button class="btn btn-default" id="button" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></button></span>
-          <input type="text" class="form-control formInput" id="maindisplayform" onkeypress=" handle(event) " placeholder="Search for..">
-          <a href="https://en.wikipedia.org/wiki/Special:Random" id="random"><button id="random" class="btn" type="button"><i class="fa fa-random">Random</i></button></a>
+          <button class="btn" id="button" type="button"><i class="fa fa-search"></i></button></span>
+          <input autofocus type="text" class="form-control formInput" id="maindisplayform" onkeypress=" handle(event)" placeholder="">
+          <a href="https://en.wikipedia.org/wiki/Special:Random" id="random"><button id="random" class="btn" type="button"><i class="fa fa-random"> Random</i></button></a>
        </div> <!-- input -->
       </div> <!-- col-lg-12 -->
       </div> <!-- end first row -->
     </div> <!-- end container ! -->
+    </div>
     <div class="after" style="display:none;" id="after"> 
-    <div class="navbar navbar-trans navbar-default" role="navigation">
+    <div class="navbar navbar-default" role="navigation">
+      <div class="navbar-inner">
       <ul class="nav navbar-nav">
         <li>
           <div class="input-group">
           <span class="input-group-btn">
-            <button class="btn btn-default" id="button1" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></button>
+            <button class="btn" id="button1" type="button"><i class="fa fa-search"></i></button>
           </span>
-          <input type="text" class="form-control formInput" id="secondform" onkeypress="handle(event)" placeholder="">
+          <input type="text" class="form-control" id="secondform" onkeypress="handle(event)" placeholder="">
           </div>
         </li>
       </ul> <!-- end ul --> 
+      </div>
     </div> <!-- navbar for after search has been entered -->
     <div id="second" class="container"> 
       <div id="hm"><i class="fa "></i> </div>
