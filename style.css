@@ -79,9 +79,9 @@ a:hover {
 #secondform {
   border-color:#EB9C09;
   border-radius:30px;
+  padding:none;
 }
 #button1 {
-  margin-left:20px;
   padding:none;
   color:#EB9C09;
 }
